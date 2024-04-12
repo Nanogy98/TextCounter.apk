@@ -1,4 +1,4 @@
-# TextCounter.apk
+# TextCounter
 - 貼り付け機能まだ作りかけ
 # SDK 
 - API34
