@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TextCounter</string>
+    <string name="button_cnt">カウント</string>
+    <string name="button_del">リセット</string>
+    <string name="button_cpy">コピー</string>
+    <string name="button_pst">貼り付け</string>
+    <string name="hint">文字を入力</string>
+    <string name="normal">文字を入力</string>
+</resources>

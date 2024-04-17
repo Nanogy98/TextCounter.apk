@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--  ダークテーマ用 カラーパレット宣言(Base application theme. ) -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!--  Primary brand color.  --><!--  Secondary brand color.  -->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--  ステータスバーカラー(Status bar color.)  -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/teal</item>
+        <!-- 履歴タブのアプリ名  -->
+        <item name="windowActionBar">false</item>
+        <!--  Activityの上のアプリ名タブ  -->
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
