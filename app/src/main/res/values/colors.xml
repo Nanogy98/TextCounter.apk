@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources><!--カラーパレット -->
+    <!-- ボタンの色-->
     <color name="purple">#FF6200EE</color>
+    <!-- 背景(background)の色-->
     <color name="teal">#99EAF4</color>
-    <color name="black">#FF000000</color>
+    <!-- edittext@backgroundの色 -->
     <color name="white">#FFFFFFFF</color>
+    <!-- TextViewとeditText@textcolorの色 -->
+    <color name="great">#585C5C</color>
+    <!--テキスト選択時の色 -->
+    <color name="blue">#0163AF</color>
+
+
+    <color name="black">#000000</color>
 </resources>

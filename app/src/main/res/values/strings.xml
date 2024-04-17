@@ -6,4 +6,6 @@
     <string name="button_pst">貼り付け</string>
     <string name="hint">文字を入力</string>
     <string name="normal">文字を入力</string>
+    <string name="notext">テキストが入力されていません</string>
+    <string name="letters">文字</string>
 </resources>

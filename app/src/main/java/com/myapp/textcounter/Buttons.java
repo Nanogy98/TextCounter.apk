@@ -8,4 +8,12 @@ public class Buttons  {
     public void setCount(Editable text){this.textLen = text.length();}
     public int getCount(){ return this.textLen; }
 
+    public boolean setJudge(int len){
+        if(len == 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
