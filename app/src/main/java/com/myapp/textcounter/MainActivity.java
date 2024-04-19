@@ -1,29 +1,24 @@
 package com.myapp.textcounter;
 
-
-
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import android.content.ClipboardManager;
 import android.content.ClipData;
 import android.content.Context;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.os.Build;
+import android.view.View;
 import java.util.Objects;
 import static androidx.appcompat.app.AppCompatDelegate.*;
 //AppcompatActivityクラスに継承
 public class MainActivity extends AppCompatActivity {
     //フィールド
     private EditText editText;
-    private TextView textView;
+    private TextView textLetter,textLines;
     Buttons bt = new Buttons();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +26,16 @@ public class MainActivity extends AppCompatActivity {
 
         //API28以降はシステムの設定に依存させる
         if(Build.VERSION.SDK_INT>=28){
-            AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_FOLLOW_SYSTEM); // アプリ全体に適用
+            setDefaultNightMode(MODE_NIGHT_FOLLOW_SYSTEM); // アプリ全体に適用
         }else{//API28以下はダークテーマ無効化
-            AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO);
+            setDefaultNightMode(MODE_NIGHT_NO);
         }
 
-        //テキスト入力
+        //使用するアイテム(オブジェクト)の定義
         editText = findViewById(R.id.edit_text);
-        //テキスト表示
-        textView  = findViewById(R.id.text_view);
-        //使用するボタンの定義
+        textLetter  = findViewById(R.id.text_letters2);
+        textLines = findViewById(R.id.text_lines2);
+
         //テキストカウント
         Button button_cnt = findViewById(R.id.button_cnt);
         button_cnt.setOnClickListener(new ButtonCount());
@@ -53,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         //テキストペースト
         Button button_pst = findViewById(R.id.button_pst);
         button_pst.setOnClickListener(new ButtonPaste());
-        //view初期表示
-        textView.setText("0文字");
+
     }
 
    class ButtonCount implements View.OnClickListener {
@@ -63,16 +57,17 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             bt.setCount(editText.getText());
             if(bt.setJudge(bt.getCount ())){
-                Toast.makeText(toastMsg, R.string.notext, Toast.LENGTH_SHORT).show();
+                Toast.makeText(toastMsg, R.string.noText, Toast.LENGTH_SHORT).show();
             }
-            textView.setText(bt.getCount() + "文字");
+            textLetter.setText(Integer.toString(bt.getCount()));
+            textLines.setText(Integer.toString(editText.getLineCount()));
         }
     }
-
     class ButtonDelete implements View.OnClickListener {
         public void onClick(View view){
             editText.getText().clear();
-            textView.setText(editText.getText().length() + "文字");
+            textLetter.setText(Integer.toString(editText.getText().length()));
+            textLines.setText(Integer.toString(editText.getLineCount()));
         }
     }
 
@@ -83,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             bt.setCount(editText.getText());
             if(bt.setJudge(bt.getCount ())){
-                Toast.makeText(toastMsg, R.string.notext, Toast.LENGTH_SHORT).show();
+                Toast.makeText(toastMsg, R.string.noText, Toast.LENGTH_SHORT).show();
             }else{
                 // Editのテキストを取得
                 ClipData clip = ClipData.newPlainText(null, editText.getText());
@@ -92,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
             //OS 12L以下かつ、edittext内の文字の長さが0でない時だけバブルを出す
             if(Build.VERSION.SDK_INT<=32 && bt.getCount() !=0) {
-                Toast.makeText(toastMsg, "コピーしました", Toast.LENGTH_SHORT).show();
+                Toast.makeText(toastMsg, R.string.copy, Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -100,16 +95,17 @@ public class MainActivity extends AppCompatActivity {
     class ButtonPaste implements View.OnClickListener {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         public void onClick(View view) {
-            CharSequence pasteData;
             try {
                 //グリップボートのデータの位置     0番目
                 ClipData.Item item = Objects.requireNonNull (clipboard.getPrimaryClip ( )).getItemAt (0);
-                pasteData = item.getText ( );
+                CharSequence pasteData = item.getText ( );
                 editText.setText (pasteData);
-                textView.setText (pasteData.length ( ) + "文字");
+                textLetter.setText (pasteData.length ( ));
+                textLines.setText(Integer.toString(editText.getLineCount()));
             } catch (Exception e) {
                 return;
             }
         }
     }
+
 }

@@ -10,7 +10,6 @@
     <color name="great">#585C5C</color>
     <!--テキスト選択時の色 -->
     <color name="blue">#0163AF</color>
-
-
+    <!-- 予備 -->
     <color name="black">#000000</color>
 </resources>
