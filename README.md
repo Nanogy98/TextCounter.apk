@@ -12,6 +12,6 @@
 -
 -
 ## 実機
-Google Pixel 3a
-Google Pixel 6a
-Xperia X Performance
+- Google Pixel 3a
+- Google Pixel 6a
+- Xperia X Performance
