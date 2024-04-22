@@ -13,8 +13,8 @@ import android.os.Build;
 import android.view.View;
 import java.util.Objects;
 import static androidx.appcompat.app.AppCompatDelegate.*;
-//AppcompatActivityクラスに継承
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity {//継承
     //フィールド
     private EditText editText;
     private TextView textLetter,textLines;
@@ -48,37 +48,34 @@ public class MainActivity extends AppCompatActivity {
         //テキストペースト
         Button button_pst = findViewById(R.id.button_pst);
         button_pst.setOnClickListener(new ButtonPaste());
-
     }
 
-   class ButtonCount implements View.OnClickListener {
-        //トーストメッセージ
-       Context toastMsg = getApplicationContext();
+     class ButtonCount implements View.OnClickListener {
         public void onClick(View view) {
             bt.setCount(editText.getText());
-            if(bt.setJudge(bt.getCount ())){
-                Toast.makeText(toastMsg, R.string.noText, Toast.LENGTH_SHORT).show();
+            if(bt.setJudge()){
+                Toast.makeText(getApplicationContext(), R.string.noText, Toast.LENGTH_SHORT).show();//トーストメッセージ
             }
-            textLetter.setText(Integer.toString(bt.getCount()));
-            textLines.setText(Integer.toString(editText.getLineCount()));
+            textLetter.setText(bt.format());
+            textLines.setText(bt.formatter(editText.getLineCount()));
         }
     }
+
     class ButtonDelete implements View.OnClickListener {
         public void onClick(View view){
             editText.getText().clear();
-            textLetter.setText(Integer.toString(editText.getText().length()));
-            textLines.setText(Integer.toString(editText.getLineCount()));
+            textLetter.setText(bt.formatter(editText.getText().length()));
+            textLines.setText(bt.formatter(editText.getLineCount()));
         }
     }
 
     class ButtonCopy implements View.OnClickListener {
-        //クリップボードにコピー | クリップボードマネージャー
+        //クリップボードマネージャー
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        Context toastMsg = getApplicationContext();
         public void onClick(View view) {
             bt.setCount(editText.getText());
-            if(bt.setJudge(bt.getCount ())){
-                Toast.makeText(toastMsg, R.string.noText, Toast.LENGTH_SHORT).show();
+            if(bt.setJudge()){
+                Toast.makeText(getApplicationContext(), R.string.noText, Toast.LENGTH_SHORT).show();
             }else{
                 // Editのテキストを取得
                 ClipData clip = ClipData.newPlainText(null, editText.getText());
@@ -87,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
             //OS 12L以下かつ、edittext内の文字の長さが0でない時だけバブルを出す
             if(Build.VERSION.SDK_INT<=32 && bt.getCount() !=0) {
-                Toast.makeText(toastMsg, R.string.copy, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.copy, Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -101,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 CharSequence pasteData = item.getText ( );
                 editText.setText (pasteData);
                 textLetter.setText (pasteData.length ( ));
-                textLines.setText(Integer.toString(editText.getLineCount()));
+                textLines.setText(bt.formatter(editText.getLineCount()));
             } catch (Exception e) {
                 return;
             }
