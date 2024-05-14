@@ -9,10 +9,8 @@
 - 2020.3.1(0.7まで)
 - 2023.2.1
 ## Gradle
-- Android Gradle Plugin Version
--- 7.0.4
-- Gradle Version
--- 7.2
+- Android Gradle Plugin Version：7.0.4
+- Gradle Version：7.2
 ## 実機
 - Google Pixel 3a
 - Google Pixel 6a
