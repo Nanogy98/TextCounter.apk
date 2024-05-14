@@ -7,7 +7,7 @@
 - TargetSDK：34
 - CompileSDK：34
 ### Studio
-- 2020.3.1(0.7以下)
+- 2020.3.1(0.7以前)
 - 2023.2.1(0.8以降)
 ## Gradle
 - Android Gradle Plugin Version：7.0.4
