@@ -1,6 +1,6 @@
 # TextCounter
 - Android 5.1以降で動作
-- 貼り付け機能まだ実装途中
+- 貼り付け機能 実装途中
 ## Android 
 ### SDK 
 - API34
