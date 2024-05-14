@@ -3,9 +3,9 @@
 - 貼り付け機能 実装途中
 ## Android 
 ### SDK 
-- CompileSDK：API34
 - MinSDK：API21
 - TargetSDK：34
+- CompileSDK：34
 ### Studio
 - 2020.3.1(0.7まで)
 - 2023.2.1
