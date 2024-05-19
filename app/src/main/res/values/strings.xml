@@ -5,6 +5,8 @@
     <string name="button_cpy">コピー</string>
     <string name="button_pst">貼り付け</string>
 
+    <string name="button_dark">ダークモード</string>
+
     <string name="hint">テキストを入力</string>
     <string name="noText">テキストが入力されていません</string>
     <string name="copy">コピーしました</string>
@@ -12,5 +14,7 @@
     <string name="lines">行数:</string>
     <string name="letters_zero">0</string>
     <string name="lines_zero">1</string>
+    <string name="True">有効</string>
+    <string name="False">無効</string>
 
 </resources>

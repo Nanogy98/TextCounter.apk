@@ -1,10 +1,7 @@
 package com.myapp.textcounter;
 
 import android.text.Editable;
-import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Buttons extends AppCompatActivity {
+public class Buttons  {
     //テキストのカウント
     private int textLen;
 
@@ -25,7 +22,5 @@ public class Buttons extends AppCompatActivity {
     public String formatter(int lines){
         return Integer.toString (lines);
     }
-
-
 
 }

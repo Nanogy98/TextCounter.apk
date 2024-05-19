@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- ホワイトテーマ用 テーマで使用するカラーの指定 -->
-    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- ボタンの色-->
+    <style name="Theme.TextCounter" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- ボタンの色--><!-- アプリの主なブランドカラー,デフォルトではアクションバーの背景。 -->
         <item name="colorPrimary">@color/purple</item>
         <!-- TextViewとeditTextのテキストの色 -->
         <item name="android:textColor">@color/great</item>
-        <!-- 背景(background)の色--><!-- アプリの主なブランドカラー,デフォルトではアクションバーの背景。 -->
+        <!-- 背景(background)の色-->
         <item name="android:colorPrimary">@color/white</item>
         <!-- テキスト選択時のカラー-->
         <item name="colorSecondary">#5A9ACC</item>

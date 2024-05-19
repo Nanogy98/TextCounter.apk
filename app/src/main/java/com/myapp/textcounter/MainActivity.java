@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipboardManager;
 import android.content.ClipData;
 import android.content.Context;
-import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 import android.os.Bundle;
 import android.os.Build;
 import android.view.View;
@@ -16,22 +18,15 @@ import static androidx.appcompat.app.AppCompatDelegate.*;
 
 public class MainActivity extends AppCompatActivity {//継承
     //フィールド
-    private EditText editText;
     private TextView textLetter,textLines;
+    private EditText editText;
     Buttons bt = new Buttons();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //API28以降はシステムの設定に依存させる
-        if(Build.VERSION.SDK_INT>=28){
-            setDefaultNightMode(MODE_NIGHT_FOLLOW_SYSTEM); // アプリ全体に適用
-        }else{//API28以下はダークテーマ無効化
-            setDefaultNightMode(MODE_NIGHT_NO);
-        }
-
-        //使用するアイテム(オブジェクト)の定義
+        //使用アイテムの定義
         editText = findViewById(R.id.edit_text);
         textLetter  = findViewById(R.id.text_letters2);
         textLines = findViewById(R.id.text_lines2);
@@ -41,15 +36,43 @@ public class MainActivity extends AppCompatActivity {//継承
         button_cnt.setOnClickListener(new ButtonCount());
         //テキスト削除
         Button button_del = findViewById(R.id.button_del);
-        button_del.setOnClickListener( new ButtonDelete());
+        button_del.setOnClickListener(new ButtonDelete());
         //テキストコピー
         Button button_cpy = findViewById(R.id.button_cpy);
         button_cpy.setOnClickListener(new ButtonCopy());
         //テキストペースト
         Button button_pst = findViewById(R.id.button_pst);
         button_pst.setOnClickListener(new ButtonPaste());
+
+        //スイッチの イベントを作成
+        Switch toggleSwitch = findViewById(R.id.switch1);
+        toggleSwitch.setOnCheckedChangeListener(new onCheckedChangeListener());
+
+        //起動時にシステムのダークモードがYESの場合はtrue(ダークモードオン)
+        if(getDefaultNightMode() == MODE_NIGHT_YES){
+            toggleSwitch.setChecked(true);
+        }
+        //そうでない場合はfalse(無効)
+        else if(getDefaultNightMode()== MODE_NIGHT_NO){
+            toggleSwitch.setChecked(false);
+        }
     }
 
+    // トグルスイッチを押した時に処理するクラス。
+    class onCheckedChangeListener implements CompoundButton.OnCheckedChangeListener{
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+            if (isChecked) {
+                setDefaultNightMode(MODE_NIGHT_YES);
+                //Toast.makeText(getApplicationContext(), R.string.True, Toast.LENGTH_SHORT).show();
+            }
+            else {
+                setDefaultNightMode(MODE_NIGHT_NO);
+                //Toast.makeText(getApplicationContext(), R.string.False, Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
      class ButtonCount implements View.OnClickListener {
         public void onClick(View view) {
             bt.setCount(editText.getText());
@@ -100,9 +123,8 @@ public class MainActivity extends AppCompatActivity {//継承
                 textLetter.setText (pasteData.length ( ));
                 textLines.setText(bt.formatter(editText.getLineCount()));
             } catch (Exception e) {
-                return;
+               System.out.println(e); return;
             }
         }
     }
-
 }
