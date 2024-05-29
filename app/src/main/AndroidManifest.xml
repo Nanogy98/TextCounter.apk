@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--Androidアプリを作る際に必須のアプリに関する情報-->
+<?xml version="1.0" encoding="utf-8"?><!--Androidアプリを作る際のアプリに関する情報-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.myapp.textcounter">
 
     <application

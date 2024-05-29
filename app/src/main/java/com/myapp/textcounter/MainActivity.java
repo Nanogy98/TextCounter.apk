@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {//継承
             }
         }
     }
-     class ButtonCount implements View.OnClickListener {
+    class ButtonCount implements View.OnClickListener {
         public void onClick(View view) {
             bt.setCount(editText.getText());
             if(bt.setJudge()){
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {//継承
                 textLetter.setText (pasteData.length ( ));
                 textLines.setText(bt.formatter(editText.getLineCount()));
             } catch (Exception e) {
-               System.out.println(e); return;
+                System.out.println(e); return;
             }
         }
     }
