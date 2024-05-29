@@ -1,26 +1,34 @@
 package com.myapp.textcounter;
 
+import android.os.Build;
 import android.text.Editable;
 public class Buttons  {
     //テキストのカウント
-    private int textLen;
-
     //edittextの文字列の長さを取得するメソッド
-    public void setCount(Editable text){this.textLen = text.length();}
-    //edittextの文字列の長さを返すメソッド
-    public int getCount(){ return this.textLen; }
-
-    //edittextの文字列の長さが0であるか判断するメソッド
-    public boolean setJudge(){
-        if(textLen == 0){return true;}
-        else {return false;}
+    public String Count(Editable text){
+        return Integer.toString (text.length());
     }
+    //edittextの文字列の長さが0であるか判断するメソッド
+    public boolean Judge(Editable s){
+        int L = s.toString ().length();
+        if(L == 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     //Int型からstring型に変換するメソッド
-    //textLenの値から変換
-    public String format(){return Integer.toString (textLen);}
-    //引数から変換
-    public String formatter(int lines){
+    public String format(int lines){
         return Integer.toString (lines);
     }
-
+    //OS Version Check
+    public boolean ChkOS(int ver){
+        if(Build.VERSION.SDK_INT<=ver ){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

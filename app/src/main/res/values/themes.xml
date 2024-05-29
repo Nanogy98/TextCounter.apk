@@ -9,7 +9,7 @@
         <item name="android:colorPrimary">@color/white</item>
         <!-- テキスト選択時のカラー-->
         <item name="colorSecondary">#5A9ACC</item>
-
+        <!--<item name="android:background">@color/teal</item>-->
         <!-- ステータスバーカラー -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/teal</item>
         <!-- 履歴タブのアプリ名  -->

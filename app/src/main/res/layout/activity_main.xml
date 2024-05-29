@@ -107,7 +107,7 @@
         android:layout_height="320dp"
         android:layout_marginBottom="5dp"
         android:autofillHints="@string/hint"
-        android:background="@color/white"
+        android:background="@android:drawable/editbox_background"
         android:gravity="top"
         android:hint="@string/hint"
         android:inputType="textMultiLine"
@@ -117,17 +117,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_lines2" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+    <ToggleButton
+        android:id="@+id/TG_switch"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015" />
-
+        app:layout_constraintVertical_bias="0.008" />
+    <!--
+        <Switch
+            android:id="@+id/TG_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.015" />
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
 
