@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal"
-    android:foregroundTint="@color/white"
+    android:background="@color/BackgroundColor"
     android:textAlignment="center"
     tools:context=".MyActivity">
 
@@ -16,7 +15,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginBottom="95dp"
         android:text="@string/button_cnt"
-        app:backgroundTint="@color/purple"
+        android:textColor="@color/TextColorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -27,7 +26,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginBottom="45dp"
         android:text="@string/button_cpy"
-        app:backgroundTint="@color/purple"
+        android:textColor="@color/TextColorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -37,8 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="45dp"
-        android:backgroundTint="@color/purple"
         android:text="@string/button_pst"
+        android:textColor="@color/TextColorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -48,8 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="95dp"
-        android:backgroundTint="@color/purple"
         android:text="@string/button_del"
+        android:textColor="@color/TextColorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -61,6 +60,7 @@
         android:layout_marginTop="45dp"
         android:gravity="right"
         android:text="@string/letters"
+        android:textColor="@color/TextColorGray"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,6 +73,7 @@
         android:layout_marginTop="80dp"
         android:gravity="right"
         android:text="@string/lines"
+        android:textColor="@color/TextColorGray"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -85,6 +86,7 @@
         android:layout_marginEnd="100dp"
         android:gravity="right"
         android:text="@string/letters_zero"
+        android:textColor="@color/TextColorGray"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -97,13 +99,14 @@
         android:layout_marginEnd="100dp"
         android:gravity="right"
         android:text="@string/lines_zero"
+        android:textColor="@color/TextColorGray"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_text"
-        android:layout_width="300dp"
+        android:layout_width="305dp"
         android:layout_height="320dp"
         android:layout_marginBottom="5dp"
         android:autofillHints="@string/hint"
@@ -121,12 +124,29 @@
         android:id="@+id/TG_switch"
         android:layout_width="65dp"
         android:layout_height="40dp"
+        android:textColor="@color/ToggleColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.008" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/button_chk"
+        android:textColor="@color/TextColorGray"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.990" />
+
     <!--
         <Switch
             android:id="@+id/TG_switch"

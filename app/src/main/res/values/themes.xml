@@ -2,18 +2,16 @@
     <!-- ホワイトテーマ用 テーマで使用するカラーの指定 -->
     <style name="Theme.TextCounter" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- ボタンの色--><!-- アプリの主なブランドカラー,デフォルトではアクションバーの背景。 -->
-        <item name="colorPrimary">@color/purple</item>
-        <!-- TextViewとeditTextのテキストの色 -->
-        <item name="android:textColor">@color/great</item>
-        <!-- 背景(background)の色-->
-        <item name="android:colorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/buttonColor</item>
         <!-- テキスト選択時のカラー-->
-        <item name="colorSecondary">#5A9ACC</item>
-        <!--<item name="android:background">@color/teal</item>-->
-        <!-- ステータスバーカラー -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/teal</item>
+        <item name="colorSecondary">@color/blue</item>
+
+        <!-- 履歴タブの色-->
+        <item name="android:colorPrimary">@color/ActionColor</item>
         <!-- 履歴タブのアプリ名  -->
         <item name="windowActionBar">false</item>
+        <!-- ステータスバーカラー -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/BackgroundColor</item>
         <!-- Activityの上のアプリ名タブ  -->
         <item name="windowNoTitle">true</item>
     </style>

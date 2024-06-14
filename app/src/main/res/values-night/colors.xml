@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources><!--カラーパレット (ダークテーマで必要な色だけ定義)-->
     <!-- ボタンの色-->
-    <color name="purple">#50A1E1</color>
+    <color name="buttonColor">#2196F3</color>
     <!-- 背景(background)の色-->
-    <color name="teal">#313535</color>
-    <!-- edittext@backgroundとTextView@backgroundの色 -->
-    <color name="white">#FFFFFFFF</color>
-
-
+    <color name="BackgroundColor">#313535</color>
+    <!--TextColorの色 -->
+    <color name="TextColorGray">#FFFFFFFF</color>
+    <!-- ToggleButton@TextColorの色-->
+    <color name="ToggleColor">#313535</color>
+    <!-- 履歴タブの色  -->
+    <color name="ActionColor">#FFFFFF</color>
+    <!--<color name="ActionColor">#41D681</color>-->
 </resources>

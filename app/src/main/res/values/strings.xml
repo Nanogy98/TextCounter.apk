@@ -6,6 +6,7 @@
     <string name="button_pst">貼り付け</string>
 
     <string name="button_dark">ダークモード</string>
+    <string name="button_chk">テキストをリアルタイムでカウント</string>
 
     <string name="hint">テキストを入力</string>
     <string name="noText">テキストが入力されていません</string>
