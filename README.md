@@ -9,7 +9,7 @@
 ### Studio
 - 2023.2.1
 ## Gradle
-- Android Gradle Plugin Version：7.4.2
-- Gradle Version：7.5
+- Android Gradle Plugin：7.4.2
+- Gradle：7.5
 ## 実機
 - Google Pixel 3a
