@@ -1,21 +1,36 @@
 <resources>
     <string name="app_name">TextCounter</string>
+
     <string name="button_cnt">カウント</string>
     <string name="button_del">リセット</string>
     <string name="button_cpy">コピー</string>
     <string name="button_pst">貼り付け</string>
-
+    <string name="button_bck">戻る</string>
     <string name="button_dark">ダークモード</string>
     <string name="button_chk">テキストをリアルタイムでカウント</string>
 
     <string name="hint">テキストを入力</string>
     <string name="noText">テキストが入力されていません</string>
     <string name="copy">コピーしました</string>
-    <string name="letters">文字数:</string>
-    <string name="lines">行数:</string>
-    <string name="letters_zero">0</string>
+
+   <!-- <string name="letters_zero">0</string>
     <string name="lines_zero">1</string>
     <string name="True">有効</string>
-    <string name="False">無効</string>
+    <string name="False">無効</string>-->
 
+    <!--<string name="BytesTitle">バイト数</string> -->
+    <string name="Bytes">Bytes</string>
+
+    <string name="letters">文字数:</string>
+    <string name="lines">行数:</string>
+    <string name="NoBreak">改行抜き:</string>
+    <string name="NoEmpty">空白抜き:</string>
+
+    <string name="Byte_UTF_8">UTF-8:</string>
+    <string name="Byte_UTF_16">UTF-16:</string>
+    <string name="Byte_Shift_JIS">Shift-JIS:</string>
+    <string name="Byte_EUC_JP">EUC-JP:</string>
+
+   <!-- <string name="Byte_JIS">JIS:</string>  -->
+   <!-- <string name="Paper">原稿用紙:</string> -->
 </resources>
