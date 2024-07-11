@@ -3,7 +3,7 @@
 - 貼り付け機能 実装途中
 ## Android 
 ### SDK 
-- MinSDK：API21
+- MinSDK：21
 - TargetSDK：34
 - CompileSDK：34
 ### Studio
