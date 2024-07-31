@@ -11,5 +11,5 @@
 ## Gradle
 - Android Gradle Plugin：7.4.2
 - Gradle：7.5
-## 実機
+## Device
 - Google Pixel 3a
