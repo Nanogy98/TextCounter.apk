@@ -27,17 +27,6 @@ private TextView LI,LT,PA,BR,EM,EUC,UTF8,UTF16,JIS,SHIFT;
         String text = b.getString("text data"),
         lines = b.getString ("text lines");
 
-     /*   TextView LT = findViewById (R.id.text_letters2),
-                LI = findViewById (R.id.text_lines2),
-                PA = findViewById (R.id.text_paper2),
-                EM = findViewById (R.id.text_empty2),
-                BR = findViewById (R.id.text_break2),
-                UTF8 = findViewById (R.id.text_utf_8_2),
-                UTF16 = findViewById (R.id.text_utf_16_2),
-                EUC = findViewById (R.id.text_euc_2),
-                SHIFT = findViewById (R.id.text_shift_2),
-                JIS = findViewById (R.id.text_jis_2);*/
-
         LT = findViewById (R.id.text_letters2);
         LI = findViewById (R.id.text_lines2);
         //PA = findViewById (R.id.text_paper2);
