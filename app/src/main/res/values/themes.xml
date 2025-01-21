@@ -9,10 +9,10 @@
         <!-- 履歴タブの色-->
         <item name="android:colorPrimary">@color/ActionColor</item>
         <!-- 履歴タブのアプリ名  -->
-        <item name="windowActionBar">false</item>
+        <item name="windowActionBar">true</item>
         <!-- ステータスバーカラー -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/BackgroundColor</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/statusBarColor</item>
         <!-- Activityの上のアプリ名タブ  -->
-        <item name="windowNoTitle">true</item>
+        <item name="windowNoTitle">false</item>
     </style>
 </resources>

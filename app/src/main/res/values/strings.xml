@@ -1,36 +1,51 @@
 <resources>
     <string name="app_name">TextCounter</string>
 
+    <!--Button-->
     <string name="button_cnt">カウント</string>
-    <string name="button_del">リセット</string>
+    <string name="button_res">リセット</string>
     <string name="button_cpy">コピー</string>
     <string name="button_pst">貼り付け</string>
     <string name="button_bck">戻る</string>
-    <string name="button_dark">ダークモード</string>
-    <string name="button_chk">テキストをリアルタイムでカウント</string>
+    <string name="button_chk">リアルタイム</string>
+    <string name="button_all_del">全件削除</string>
 
-    <string name="hint">テキストを入力</string>
-    <string name="noText">テキストが入力されていません</string>
-    <string name="copy">コピーしました</string>
-
-   <!-- <string name="letters_zero">0</string>
-    <string name="lines_zero">1</string>
-    <string name="True">有効</string>
-    <string name="False">無効</string>-->
-
-    <!--<string name="BytesTitle">バイト数</string> -->
-    <string name="Bytes">Bytes</string>
-
+    <!--TextView -->
     <string name="letters">文字数:</string>
     <string name="lines">行数:</string>
     <string name="NoBreak">改行抜き:</string>
     <string name="NoEmpty">空白抜き:</string>
+    <string name="maxLengthText">上限指定:</string>
 
+    <!-- Burble Message-->
+    <string name="burble_message_noText">テキストが入力されていません</string>
+    <string name="burble_message_copy">コピーしました</string>
+
+    <!-- Hint Message-->
+    <string name="hint_input">テキストを入力</string>
+
+    <!-- OptionMenu Text-->
+    <string name="option_edittext_history">入力履歴</string>
+    <string name="option_change_theme">テーマ変更</string>
+    <string name="option_app_close">アプリ終了</string>
+
+    <!-- DialogText -->
+    <string name="dialog_theme_title">テーマ選択</string>
+    <string name="dialog_theme_choice_1">ホワイト</string>
+    <string name="dialog_theme_choice_2">ダーク</string>
+    <string name="dialog_theme_choice_3">システムと連動</string>
+
+    <!--
+    <string name="BytesTitle">バイト数</string>
+    <string name="Bytes">Bytes</string>
+    -->
+    <!--
     <string name="Byte_UTF_8">UTF-8:</string>
     <string name="Byte_UTF_16">UTF-16:</string>
     <string name="Byte_Shift_JIS">Shift-JIS:</string>
     <string name="Byte_EUC_JP">EUC-JP:</string>
+    -->
+    <!-- <string name="Byte_JIS">JIS:</string>  -->
+    <!-- <string name="Paper">原稿用紙:</string> -->
 
-   <!-- <string name="Byte_JIS">JIS:</string>  -->
-   <!-- <string name="Paper">原稿用紙:</string> -->
 </resources>

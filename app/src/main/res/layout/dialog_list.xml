@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <TextView
+                android:id="@+id/text_letters"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:gravity="left"
+                android:text="@string/letters"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_letters2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:gravity="right"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_lines"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:gravity="left"
+                android:text="@string/lines"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_lines2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:gravity="right"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_break1"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:gravity="left"
+                android:text="@string/NoBreak"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/text_break2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:gravity="right"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/text_empty"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:gravity="center|left"
+                android:text="改行・空白抜き:"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text_empty2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:gravity="right"
+                android:textColor="@color/dialogTextColor"
+                android:textSize="24sp" />
+        </GridLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/TextScroll"
+        android:background="@android:drawable/editbox_background"
+        android:layout_width="290dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/textViewer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,7 @@
     <!-- 履歴タブの色  -->
     <color name="ActionColor">#FFFFFF</color>
     <!--<color name="ActionColor">#41D681</color>-->
+
+    <!-- ボタンの色-->
+    <color name="statusBarColor">#0770C5</color>
 </resources>
